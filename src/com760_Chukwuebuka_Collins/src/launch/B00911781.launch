@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <param name="robot_description" textfile="$(find com760_Chukwuebuka_Collins)/src/urdf/robot.xacro"/>
+    <arg name="x" default="0"/>
+    <arg name="y" default="0"/>
+    <arg name="z" default="0.5"/>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find com760_Chukwuebuka_Collins)/path/to/your/rviz/config/file.rviz"/>
+
+</launch>

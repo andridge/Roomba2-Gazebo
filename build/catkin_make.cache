@@ -1,0 +1,2 @@
+com760_Chukwuebuka_Collins
+-DCATKIN_DEVEL_PREFIX=/Users/andridgemunene/Desktop/openseasons2/devel -DCMAKE_INSTALL_PREFIX=/Users/andridgemunene/Desktop/openseasons2/install -G Unix Makefiles

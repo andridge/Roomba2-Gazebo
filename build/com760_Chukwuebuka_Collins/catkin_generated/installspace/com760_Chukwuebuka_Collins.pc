@@ -1,0 +1,8 @@
+prefix=/Users/andridgemunene/Desktop/openseasons2/install
+
+Name: com760_Chukwuebuka_Collins
+Description: Description of com760_Chukwuebuka_Collins
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

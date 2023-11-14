@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <param name="robot_description" textfile="$(find com760_Chukwuebuka_Collins)/src/urdf/robot.urdf"/>
+    <arg name="world" default="/Users/andridgemunene/Desktop/openseasons2/src/com760_Chukwuebuka_Collins/src/world/com760B00911781.world"/>
+    
+    <arg name="x" default="-4"/>
+    <arg name="y" default="-2"/>
+    <arg name="z" default="0.5"/>
+
+    
+    <node pkg="com760_Chukwuebuka_Collins" type="second.py" name="second" output="screen" />
+    <node pkg="com760_Chukwuebuka_Collins" type="Bug0.py" name="Bug0" output="screen" />
+    <node pkg="com760_Chukwuebuka_Collins" type="Bug1.py" name="Bug1" output="screen" />
+    <node pkg="com760_Chukwuebuka_Collins" type="Bug2.py" name="Bug2" output="screen" />
+    <node pkg="com760_Chukwuebuka_Collins" type="follow_wall.py" name="wall_follower" output="screen" />
+    <node pkg="com760_Chukwuebuka_Collins" type="to_point.py" name="go_to_point" output="screen" />-->
+    <node pkg="com760_Chukwuebuka_Collins" type="controll.py" name="controll" output="screen" />
+    <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf -param robot_description -model robot -x $(arg x) -y $(arg y) -z $(arg z)" />
+    <node name="gazebo" pkg="gazebo_ros" type="gazebo" args="--verbose $(arg world)" />
+  
+
+</launch> 
